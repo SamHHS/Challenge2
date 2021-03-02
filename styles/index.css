@@ -1,0 +1,174 @@
+html {
+  box-sizing: border-box;
+}
+
+*, 
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+body{
+  background-color: black;
+  color:white;
+  font-family: 'Asap Condensed', verdana, sans-serif;
+}
+/*-----------------------------------------------------------*/
+
+/*NAVIGATION*/
+
+nav{
+  font-size:16px;
+  min-height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color:black;
+  color:white;
+}
+
+nav ul {
+  float:right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right:60px;
+}
+
+nav ul li{
+  display:inline;
+  }
+
+a {
+  color:white;
+  text-decoration: none;
+  padding: 10px;
+  }
+
+a.active{
+  color:white;
+  text-decoration: underline;
+}
+
+a:hover{
+  color:#434343;
+}
+
+#logo{
+  max-width:300px;
+  margin-bottom:-50px;
+  margin-left:40px;
+}
+
+/*-----------------------------------------------------------*/
+
+.grid-container > div:nth-child(3) {
+  width:100%;
+}
+
+
+#mainContent{
+}
+
+.spacex{
+  font-size: 40px;
+}
+
+/*STARS*/
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {    
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+    @-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+
+
+.background-container{
+  position: fixed;
+  top: 100px;
+  left:0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+ background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+.twinkling{
+  width:10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+
+  -moz-animation:move-background 70s linear infinite;
+  -ms-animation:move-background 70s linear infinite;
+  -o-animation:move-background 70s linear infinite;
+  -webkit-animation:move-background 70s linear infinite;
+  animation:move-background 70s linear infinite;
+}
+
+#hidden{
+  display:hidden;
+}
+
+
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+   
+
+
+}
+
+
+
+
+
+

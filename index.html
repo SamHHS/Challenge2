@@ -2,16 +2,55 @@
 <html lang="nl">
 	<head>
 		<meta charset="UTF-8" />
-		<title>gerrit</title>
-		<link type="text/css" href="styles/my_style.css" rel="stylesheet" />
-		<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="scripts/my_scripts.js"></script>
+		<title>SpaceX Clock</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet" />
+		<link type="text/css" href="styles/index.css" rel="stylesheet" />
+		<link type="text/css" href="styles/grid-layout.css" rel="stylesheet" />	
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
 	</head>
 	<body>
-		<section id="woonkamer">
-			<img id="background" src="images/background.jpg" />
-			<img id="gerrit" src="images/gerrit.png" />
-		</section>
-		<p>Spongebob Squarepants, Nickelodeon Animation Studios 1999</p>
+      <div class="grid-item box3">
+		<img src="img/logo.png" alt="logo" id="logo">
+	    	<nav>
+	    		<ul>
+	    			<li><a href="#" class="active">Home</a></li>
+	    			<li><a href="#">SpaceX</a></li>
+	    			<li><a href="#">Mars Colony</a></li>
+	    			<li><a href="#">What's next?</a></li>
+	    		</ul>
+	    	</nav>
+		</div>
+		<div class="grid-container">
+			<div class="grid-item box1">
+				<div class="background-container">
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+					<div class="stars"></div>
+					<div class="twinkling"></div>
+				</div>
+			</div>
+			<div class="grid-item box2">
+				<div id="mainContent">
+					<!-- CLOCK -->
+					<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+				</div>
+			</div>
+			<div class="grid-item box4">
+				<!-- STATUS BAR -->
+				
+			</div>
+			<div class="grid-item box5">
+				
+			
+			</div>
+			<div class="grid-item box6">
+				
+			
+			</div>
+		</div>
+  	<script type="text/javascript" src="index.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
 	</body>
 </html>
