@@ -1,8 +1,10 @@
+var status = 'night';
+
 function showTime(){
     var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
+    var h = date.getHours(); 
+    var m = date.getMinutes(); 
+    var s = date.getSeconds(); 
     var session = "AM";
     
     if(h == 0){
@@ -19,11 +21,31 @@ function showTime(){
     s = (s < 10) ? "0" + s : s;
     
     var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-    
-    setTimeout(showTime, 1000);
-    
+    document.getElementById("clock").innerText = time;
+    document.getElementById("clock").textContent = time;
+
+    if(session == "PM" && h >= 11 && status =="day"){ //dag naar nacht.
+        showStars();
+        status = "night";
+    }
+
+    if(session == "AM" && h >= 8 && status =="night"){ //nacht naar dag.
+        hideStars();
+        status ="day";
+    }
 }
 
-showTime();
+
+setInterval(showTime, 1000);
+
+
+function hideStars(){
+
+    document.getElementById('background').classList.add("hidden");
+
+
+}
+
+function showStars(){
+    document.getElementById('background').classList.remove("hidden");
+}

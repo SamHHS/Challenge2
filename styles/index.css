@@ -9,9 +9,11 @@ html {
 }
 
 body{
-  background-color: black;
+  background-color: red;
   color:white;
-  font-family: 'Asap Condensed', verdana, sans-serif;
+     background: black url(../img/sunshine.jpg) fixed;
+  /*font-family: 'Asap Condensed', verdana, sans-serif;*/
+     font-family: Orbitron;
 }
 /*-----------------------------------------------------------*/
 
@@ -22,7 +24,6 @@ nav{
   min-height: 80px;
   line-height: 80px;
   text-align: center;
-  background-color:black;
   color:white;
 }
 
@@ -76,47 +77,25 @@ a:hover{
 /*STARS*/
 @keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
   }
   to { 
-    -webkit-transform: translate3d(1000px, 0px, 0px);
-  }
-}
-@-webkit-keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-  to { 
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    transform: translate3d(1000px, 0px, 0px);
   }
 }
 
-@-moz-keyframes move-background {    
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-  to { 
-    -webkit-transform: translate3d(1000px, 0px, 0px);
-  }
-}
 
-    @-webkit-keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-  to { 
-    -webkit-transform: translate3d(1000px, 0px, 0px);
-  }
-}
 
 
 
 .background-container{
   position: fixed;
-  top: 100px;
+  /*top: 100px;*/
+  top: 0;
   left:0;
   bottom: 0;
   right: 0;
+  z-index: -1;
 }
 
 .stars {
@@ -126,7 +105,7 @@ a:hover{
   bottom: 0;
   left: 0;
   right: 0;
-  display: block;
+  /*display: block;*/
 }
 
 .twinkling{
@@ -138,33 +117,23 @@ a:hover{
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 2;
-
-  -moz-animation:move-background 70s linear infinite;
-  -ms-animation:move-background 70s linear infinite;
-  -o-animation:move-background 70s linear infinite;
-  -webkit-animation:move-background 70s linear infinite;
   animation:move-background 70s linear infinite;
 }
-
-#hidden{
-  display:hidden;
-}
-
 
 
 .clock {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: #fff;
     font-size: 60px;
-    font-family: Orbitron;
     letter-spacing: 7px;
    
+}
 
-
+.hidden{
+  display:none;
 }
 
 
