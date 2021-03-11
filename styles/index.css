@@ -136,6 +136,23 @@ a:hover{
   display:none;
 }
 
+/*PROGRESS BAR*/
+#statusBar{
+  width: 100%;
+  margin-top:50%;
+  background-color: #ddd;
+}
+
+#progress{
+  width: 10%;
+  height: 30px;
+  background-color: #434343;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+  
+
 
 
 
