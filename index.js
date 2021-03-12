@@ -1,4 +1,5 @@
 var status = 'night';
+// var initiate = true;
 var i = true;
 var barStatus = 0;
 
@@ -37,7 +38,7 @@ function showTime(){
     var s = date.getSeconds(); 
     var session = "AM";
 
-    if(prevTime != h){
+    if(prevTime !== h){
 
         if(session == "AM")
         {
