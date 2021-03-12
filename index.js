@@ -1,7 +1,7 @@
 var status = 'night';
-// var initiate = true;
 var i = true;
 var barStatus = 0;
+var prevTime = 0;
 
 function hideStars(){
     document.getElementById('background').classList.add("hidden");
@@ -13,8 +13,7 @@ function showStars(){
 
 function move(test, yayOrNay) {
     i = yayOrNay;
-   var barProgress = test;
-    console.log(barProgress);
+   var barProgress = Math.round(test);
   if (i == true) {
     i = false;
     var elem = document.getElementById("progress");
@@ -32,7 +31,6 @@ function move(test, yayOrNay) {
 
 function showTime(){
     var date = new Date();
-    var prevTime = 0;
     var h = date.getHours(); 
     var m = date.getMinutes(); 
     var s = date.getSeconds(); 
@@ -83,31 +81,3 @@ function showTime(){
 }
 
 setInterval(showTime, 1000);
-
-function hideStars(){
-    document.getElementById('background').classList.add("hidden");
-}
-
-function showStars(){
-    document.getElementById('background').classList.remove("hidden");
-}
-
-
-function move(test, updateProgress) {
-    i = updateProgress;
-   var barProgress = Math.round(test);
-    console.log(barProgress);
-  if (i == true) {
-    i = false;
-    var elem = document.getElementById("progress");
-    frame();
-    function frame() {
-      if (barProgress >= 100) {
-        i = true;
-      } else {
-        elem.style.width = barProgress + "%";
-        elem.innerHTML = barProgress  + "%";
-      }
-    }
-  }
-}
