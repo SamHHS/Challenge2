@@ -11,9 +11,9 @@ function showStars(){
     document.getElementById('background').classList.remove("hidden");
 }
 
-function move(test, yayOrNay) {
+function move(percentage, yayOrNay) {
     i = yayOrNay;
-   var barProgress = Math.round(test);
+   var barProgress = Math.round(percentage);
   if (i == true) {
     i = false;
     var elem = document.getElementById("progress");
@@ -65,9 +65,6 @@ function showTime(){
     
     var time = h + ":" + m + ":" + s + " " + session;
     document.getElementById("clock").innerText = time;
-    document.getElementById("clock").textContent = time;
-
-
 
     if(session == "PM" && h >= 10 && status =="day"){ //dag naar nacht.
         showStars();
