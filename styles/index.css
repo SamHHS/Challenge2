@@ -25,14 +25,15 @@ nav{
   line-height: 80px;
   text-align: center;
   color:white;
+  margin-top:50px;
 }
 
 nav ul {
-  float:right;
+  float:left;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-right:60px;
+  /*margin-right:60px;*/
 }
 
 nav ul li{
@@ -60,6 +61,11 @@ a:hover{
   margin-left:40px;
 }
 
+.aktief{
+color:green;
+text-decoration: underline;
+font-size: 20px;
+}
 /*-----------------------------------------------------------*/
 
 .grid-container > div:nth-child(3) {
@@ -84,10 +90,6 @@ a:hover{
   }
 }
 
-
-
-
-
 .background-container{
   position: fixed;
   /*top: 100px;*/
@@ -105,7 +107,6 @@ a:hover{
   bottom: 0;
   left: 0;
   right: 0;
-  /*display: block;*/
 }
 
 .twinkling{
@@ -120,16 +121,14 @@ a:hover{
   animation:move-background 70s linear infinite;
 }
 
-
 .clock {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #fff;
-    font-size: 60px;
-    letter-spacing: 7px;
-   
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+  font-size: 54px;
+  letter-spacing: 7px;
 }
 
 .hidden{
@@ -138,9 +137,11 @@ a:hover{
 
 /*PROGRESS BAR*/
 #statusBar{
-  width: 100%;
+  width: 80%;
   margin-top:50%;
   background-color: #ddd;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 #progress{
@@ -151,10 +152,7 @@ a:hover{
   line-height: 30px;
   color: white;
 }
-  
 
-
-
-
-
-
+#schedule{
+  margin-left:20%;
+}

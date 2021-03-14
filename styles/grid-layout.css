@@ -1,14 +1,15 @@
 /* mobile */
 .grid-container {
   display: grid;
+  width: 100%;
   grid-template-columns: 100%;
   margin: 0 auto;
   grid-template-areas:
         "menu"
         "title"
         "main"
-        "boxEen"
         "boxTwee"
+        "boxEen"
         "boxDrie"
         "footer";
 }
@@ -33,34 +34,44 @@
 }
 
 /* tablet */
-@media only screen and (min-width:1240px) {
+@media only screen and (min-width:1024px) {
   .grid-container {
      grid-template-columns: 1fr 1fr;
      grid-template-areas:
           "menu menu"
           "title title"
           "main main"
-          "boxEen boxTwee"
-          "boxDrie boxDrie"
+          "boxTwee boxTwee"
+          "boxEen boxDrie"
           "footer footer";
   }
 
-  nav ul{
-    margin-right:200px;
+  nav{
+    float: right;
+    margin-top:20px;
+    margin-right:50px;
   }
 
   #logo{
-    margin-left:240px;
+    margin-left:40px;
   }
 
    #mainContent{
     float:right;
     margin-right:150px;
   }
+
+  #statusBar{
+    width:60%;
+  }
+
+  #schedule{
+    margin-left:-50%;
+  }
 }
 
 /*laptoppie*/
-@media only screen and (min-width:1840px) {
+@media only screen and (min-width:1600px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -83,4 +94,12 @@
     float:right;
     margin-right:200px;
   }
+
+  #statusBar{
+    width: 100%;
+  }
+
+  #schedule{
+    margin-left:40%;
+}
 }
